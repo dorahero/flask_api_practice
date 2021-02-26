@@ -5,10 +5,6 @@ class Statistics:
         self.data = data
         self.operator = operator
 
-    @staticmethod
-    def allFunction():
-        return ["sum", "mean", "min", "max", "range", "variance", "stddev"]
-
     def sum(self):
         return sum(self.data)
     

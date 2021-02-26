@@ -11,7 +11,7 @@ def dataStatistics(request):
             data = data,
             operator = operator
         )       
-        all_function = sta.allFunction()
+        all_function = [method for method in dir(sta) if method[:2] != '__']
         res = {o: getattr(sta, o)() for o in operator}
 
         return res
